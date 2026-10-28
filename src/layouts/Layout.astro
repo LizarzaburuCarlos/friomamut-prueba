@@ -1,0 +1,70 @@
+---
+import { SEO } from "astro-seo";
+import "../styles/global.css";
+
+const { title, description, url, canonical, img } = Astro.props;
+
+const defaultTitle = "Astro Starter Template by Carlos Lizarzaburu";
+const defaultDescription =
+  " Starter template con Astro + Tailwind CSS + React + SEO básico listo para desarrollo.";
+
+const defaultUrl = "https://www.example.com/";
+const defaultImg = "https://www.example.com/images/example.webp";
+
+const currentTitle = title ? title : defaultTitle;
+const currentDescription = description ? description : defaultDescription;
+const currentUrl = canonical || url || defaultUrl;
+const currentImg = img ? img : defaultImg;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <SEO
+      title={currentTitle}
+      description={currentDescription}
+      canonical={currentUrl}
+      openGraph={{
+        basic: {
+          title: currentTitle,
+          type: "website",
+          url: currentUrl,
+          image: currentImg,
+        },
+        optional: {
+          description: currentDescription,
+          siteName: currentTitle,
+          locale: "es_PE",
+        },
+      }}
+      extend={{
+        link: [
+          { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+          { rel: "icon", type: "image/png", href: "/favicon-32x32.png" },
+          { rel: "icon", type: "image/png", href: "/favicon-16x16.png" },
+        ],
+        meta: [
+          { name: "robots", content: "index, follow" },
+          { name: "author", content: "Carlos Lizarzaburu" },
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1.0",
+          },
+          { name: "generator", content: Astro.generator },
+          { name: "description", content: currentDescription },
+
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: currentTitle },
+          { name: "twitter:description", content: currentDescription },
+          {
+            name: "twitter:image",
+            content: currentImg,
+          },
+        ],
+      }}
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body><slot /> </body>
+</html>
