@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #091D64;
+
+    --color-secondary: #3DC6AB;
+    --color-secondary-darker: #1C7967;
+
+    --color-dark-one: #181818;
+    --color-dark-two: #4B4B4B;
+    --color-dark-three: #989898;
+    --color-dark-four: #CBCBCB;
+
+    --color-light-one: #fFfFfF;
+    --color-light-two: #FFFBFB;
+    --color-light-three: #F4F4F4;
+
+}
+
+@font-face {
+    font-family: "Goldman";
+    src: url("/fonts/GoldmanSans-Blk.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PFHandbookPro";
+    src: url("/fonts/PFHandbookPro-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 html,
 table,
@@ -31,4 +66,36 @@ ol {
 html,
 body {
     height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Goldman", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+h5,
+h6 {
+    font-family: "PFHandbookPro", sans-serif;
+    letter-spacing: 5%;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+p,
+button,
+a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.custom-x-padding {
+    @apply px-6 md:px-14 lg:px-32
 }
