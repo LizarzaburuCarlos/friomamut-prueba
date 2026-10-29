@@ -1,6 +1,6 @@
-# 🚀 Astro Starter Template
+# 🚀 Friomamut Prueba by Carlos Lizarzaburu
 
-Starter template con **Astro + Tailwind CSS + React + SEO básico** listo para desarrollo.
+Código fuente del desarrollo del proyecto prueba de Friomamut, realizado por Carlos Lizarzaburu.
 
 ---
 
