@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
 import Information from "../components/Information";
+import Sondas from "../components/Sondas";
 ---
 
 <Layout
@@ -10,4 +11,5 @@ import Information from "../components/Information";
 >
   <Header />
   <Information />
+  <Sondas client:load />
 </Layout>

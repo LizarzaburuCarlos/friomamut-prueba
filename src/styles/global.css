@@ -5,6 +5,7 @@
     --color-primary: #091D64;
 
     --color-secondary: #3DC6AB;
+    --color-secondary-lighter: #E6F7F3;
     --color-secondary-darker: #1C7967;
 
     --color-dark-one: #181818;
@@ -15,6 +16,12 @@
     --color-light-one: #fFfFfF;
     --color-light-two: #FFFBFB;
     --color-light-three: #F4F4F4;
+
+    --color-alert: #C93838;
+    --color-alert-soft: #FDEDED;
+    --color-warning: #E8833A;
+    --color-warning-darker: #A3520F;
+    --color-air: #4F8DF5;
 
 }
 
