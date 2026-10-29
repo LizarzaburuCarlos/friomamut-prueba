@@ -68,6 +68,11 @@ body {
     height: 100%;
 }
 
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--color-dark-one);
+}
+
 h1,
 h2,
 h3,
